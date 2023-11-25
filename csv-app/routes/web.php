@@ -19,3 +19,9 @@ Route::get('/', function () {
 
 Route::get('/products/add', [App\Http\Controllers\ProductController::class, 'new']);
 Route::post('/products/add', [App\Http\Controllers\ProductController::class, 'store']);
+
+Route::get('/products/import', [App\Http\Controllers\ProductController::class, 'importData']);
+Route::post('/products/import', [App\Http\Controllers\ProductController::class, 'import']);
+
+Route::get('/products/export', [App\Http\Controllers\ProductController::class, 'export']);
+
